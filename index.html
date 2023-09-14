@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tailwind</title>
+</head>
+
+<body>
+    <header>
+        <nav class="py-10 bg-blue-100">
+            <ul class="flex justify-around text-xl">
+                <li><a href="#hover">hover</a></li>
+                <li><a href="#active">active</a></li>
+                <li><a href="#focus">focus</a></li>
+                <li><a href="#odd">odd/evently</a></li>
+                <li><a href="#disabled">disabled/invalid</a></li>
+                <li><a href="#group">groupe parent</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <H1 class="text-center pt-20 text-5xl">Allons plus loins dans Tailwind</H1>
+        <section id="hover" class="my-40 bg-gray-100 h-40">
+            <h2 class="text-3xl font-bold">Les hovers :</h2>
+            <button
+                class="bg-blue-500 rounded p-4 mx-auto block hover:bg-blue-800 hover:text-white hover:drop-shadow-2xl hover:p-6">Je
+                suis meilleur que
+                Bootstrap</button>
+        </section>
+        <section id="active" class="my-40 bg-gray-100 h-40">
+            <h2 class="text-3xl font-bold">Les actives :</h2>
+            <button
+                class="bg-purple-500 rounded p-4 mx-auto block active:bg-violet-800 active:text-yellow-200 active:drop-shadow-2xl active:p-6">Je
+                suis meilleur que
+                Bootstrap</button>
+        </section>
+        <section id="focus" class="my-40 bg-gray-100 h-40">
+            <h2 class="text-3xl font-bold">Les focus :</h2>
+            <button
+                class="bg-red-500 rounded p-4 mx-auto block focus:bg-red-800 focus:text-dark focus:drop-shadow-2xl focus:p-6">Je
+                suis meilleur que
+                Bootstrap</button>
+        </section>
+        <section id="odd" class="py-40">
+            <h2 class="text-3xl font-bold">Odd et evently :</h2>
+            <table class="m-auto border">
+                <thead>
+                    <tr class="border">
+                        <td class="p-3">Nom</td>
+                        <td class="p-3">Age</td>
+                        <td class="p-3">Passion</td>
+                    </tr>
+                </thead>
+                <tbody class="border">
+                    <tr class="odd:bg-white even:bg-slate-200">
+                        <td class="p-3">Maxime</td>
+                        <td class="p-3">45 ans</td>
+                        <td class="p-3">fan de digimon</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-200">
+                        <td class="p-3">José</td>
+                        <td class="p-3">12 ans</td>
+                        <td class="p-3">fan de gradur</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-200">
+                        <td class="p-3">Valentin</td>
+                        <td class="p-3">25 ans</td>
+                        <td class="p-3">Aime la culture dans toute sa diversité</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-200">
+                        <td class="p-3">Pierre</td>
+                        <td class="p-3">?? ans</td>
+                        <td class="p-3">fan de jdr</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="disabled" class="py-40 bg-gray-100">
+            <h2 class="text-3xl font-bold ">Disabled et invalid : </h2>
+            <div class="flex justify-center">
+                <form>
+                    <label class="block">
+                        <span class="block text-sm font-medium text-slate-700">Username</span>
+                        <input type="text" value="20/20 à l'exam" disabled class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+              " />
+                    </label>
+                    <label class="block">
+                        <span class="block text-sm font-medium text-slate-700">e-mail</span>
+                        <input type="email" name="e-mail" id="email" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+              " />
+                    </label>
+                    <label class="block">
+                        <span class="block text-sm font-medium text-slate-700">password</span>
+                        <input type="password" name="password" id="password" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+              " />
+                    </label>
+                    <button class="bg-blue-500 rounded mt-2 mr-0 p-2 mx-auto block hover:bg-blue-800 hover:text-white ">
+                        Valider</button>
+                </form>
+            </div>
+        </section>
+        <section id="group" class="py-40">
+            <h2 class="text-3xl font-bold ">Les groupes parents</h2>
+            <a href="#"
+                class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
+                <div class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-sky-500 group-hover:stroke-white"
+                        height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                    </svg>
+                    <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h3>
+                </div>
+                <p class="text-slate-500 group-hover:text-white text-sm">Create a new project from a variety of starting
+                    templates.</p>
+            </a>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
